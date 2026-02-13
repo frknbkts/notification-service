@@ -1,0 +1,3321 @@
+[error_logger:info,2026-02-13T16:55:18.012Z,nonode@nohost:ssl_dist_admin_sup<0.200.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ssl_dist_admin_sup}
+    started: [{pid,<0.201.0>},
+              {id,ssl_pem_cache_dist},
+              {mfargs,{ssl_pem_cache,start_link_dist,[[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.012Z,nonode@nohost:ssl_dist_admin_sup<0.200.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ssl_dist_admin_sup}
+    started: [{pid,<0.202.0>},
+              {id,ssl_dist_manager},
+              {mfargs,{ssl_manager,start_link_dist,[[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.012Z,nonode@nohost:ssl_dist_sup<0.199.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ssl_dist_sup}
+    started: [{pid,<0.200.0>},
+              {id,ssl_dist_admin_sup},
+              {mfargs,{ssl_dist_admin_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.013Z,nonode@nohost:tls_dist_sup<0.203.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_sup}
+    started: [{pid,<0.204.0>},
+              {id,dist_tls_connection_sup},
+              {mfargs,{tls_connection_sup,start_link_dist,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.015Z,nonode@nohost:tls_dist_server_sup<0.205.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_server_sup}
+    started: [{pid,<0.206.0>},
+              {id,dist_ssl_listen_tracker_sup},
+              {mfargs,{ssl_listen_tracker_sup,start_link_dist,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.015Z,nonode@nohost:tls_dist_server_sup<0.205.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_server_sup}
+    started: [{pid,<0.207.0>},
+              {id,dist_tls_server_session_ticket},
+              {mfargs,{tls_server_session_ticket_sup,start_link_dist,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.015Z,nonode@nohost:tls_dist_server_sup<0.205.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_server_sup}
+    started: [{pid,<0.208.0>},
+              {id,dist_ssl_upgrade_server_session_cache_sup},
+              {mfargs,
+                  {ssl_upgrade_server_session_cache_sup,start_link_dist,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.015Z,nonode@nohost:tls_dist_sup<0.203.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_sup}
+    started: [{pid,<0.205.0>},
+              {id,tls_dist_server_sup},
+              {mfargs,{tls_dist_server_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.015Z,nonode@nohost:ssl_dist_sup<0.199.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ssl_dist_sup}
+    started: [{pid,<0.203.0>},
+              {id,tls_dist_sup},
+              {mfargs,{tls_dist_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.015Z,nonode@nohost:net_sup<0.198.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.199.0>},
+              {id,ssl_dist_sup},
+              {mfargs,{ssl_dist_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.016Z,nonode@nohost:net_sup<0.198.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.209.0>},
+              {id,cb_dist},
+              {mfargs,{cb_dist,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.017Z,nonode@nohost:net_sup<0.198.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.210.0>},
+              {id,cb_epmd},
+              {mfargs,{cb_epmd,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,2000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.018Z,nonode@nohost:net_sup<0.198.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.211.0>},
+              {id,auth},
+              {mfargs,{auth,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,2000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.047Z,ns_1@cb.local:net_sup<0.198.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.212.0>},
+              {id,net_kernel},
+              {mfargs,{net_kernel,start_link,
+                                  [#{clean_halt => false,
+                                     name => 'ns_1@cb.local',
+                                     name_domain => longnames,
+                                     net_tickintensity => 4,
+                                     net_ticktime => 60,
+                                     supervisor => net_sup_dynamic}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,2000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.047Z,ns_1@cb.local:kernel_sup<0.49.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,kernel_sup}
+    started: [{pid,<0.198.0>},
+              {id,net_sup_dynamic},
+              {mfargs,
+                  {erl_distribution,start_link,
+                      [#{clean_halt => false,name => 'ns_1@cb.local',
+                         name_domain => longnames,net_tickintensity => 4,
+                         net_ticktime => 60,supervisor => net_sup_dynamic}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.063Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{connect,normal,'babysitter_of_ns_1@cb.local'}}
+[error_logger:info,2026-02-13T16:55:18.130Z,ns_1@cb.local:root_sup<0.196.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,root_sup}
+    started: [{pid,<0.197.0>},
+              {id,dist_manager},
+              {mfargs,{dist_manager,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.132Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.219.0>},
+              {id,local_tasks},
+              {mfargs,{local_tasks,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.142Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.220.0>},
+              {id,timeout_diag_logger},
+              {mfargs,{timeout_diag_logger,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.143Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.221.0>},
+              {id,ns_cookie_manager},
+              {mfargs,{ns_cookie_manager,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.155Z,ns_1@cb.local:chronicle_sup<0.227.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_sup}
+    started: [{pid,<0.228.0>},
+              {id,chronicle_events},
+              {mfargs,{chronicle_events,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.156Z,ns_1@cb.local:chronicle_sup<0.227.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_sup}
+    started: [{pid,<0.229.0>},
+              {id,chronicle_external_events},
+              {mfargs,{gen_event,start_link,
+                                 [{local,chronicle_external_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.156Z,ns_1@cb.local:chronicle_sup<0.227.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_sup}
+    started: [{pid,<0.230.0>},
+              {id,chronicle_ets},
+              {mfargs,{chronicle_ets,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.157Z,ns_1@cb.local:chronicle_sup<0.227.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_sup}
+    started: [{pid,<0.231.0>},
+              {id,chronicle_settings},
+              {mfargs,{chronicle_settings,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.159Z,ns_1@cb.local:chronicle_agent_sup<0.232.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_agent_sup}
+    started: [{pid,<0.233.0>},
+              {id,chronicle_snapshot_mgr},
+              {mfargs,{chronicle_snapshot_mgr,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.159Z,ns_1@cb.local:chronicle_agent_sup<0.232.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_agent_sup}
+    started: [{pid,<0.234.0>},
+              {id,chronicle_rsm_events},
+              {mfargs,{chronicle_events,start_link,[chronicle_rsm_events]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.211Z,ns_1@cb.local:chronicle_agent_sup<0.232.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_agent_sup}
+    started: [{pid,<0.235.0>},
+              {id,chronicle_agent},
+              {mfargs,{chronicle_agent,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.211Z,ns_1@cb.local:chronicle_sup<0.227.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_sup}
+    started: [{pid,<0.232.0>},
+              {id,chronicle_agent_sup},
+              {mfargs,{chronicle_agent_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.213Z,ns_1@cb.local:chronicle_sup<0.227.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_sup}
+    started: [{pid,<0.237.0>},
+              {id,chronicle_secondary_sup},
+              {mfargs,{chronicle_secondary_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.213Z,ns_1@cb.local:application_controller<0.44.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    application: chronicle
+    started_at: 'ns_1@cb.local'
+
+[error_logger:info,2026-02-13T16:55:18.219Z,ns_1@cb.local:<0.238.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.238.0>,dynamic_supervisor}
+    started: [{pid,<0.239.0>},
+              {id,chronicle_leader},
+              {mfargs,{chronicle_leader,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.220Z,ns_1@cb.local:chronicle_secondary_restartable_sup<0.240.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_secondary_restartable_sup}
+    started: [{pid,<0.241.0>},
+              {id,chronicle_status},
+              {mfargs,{chronicle_status,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.221Z,ns_1@cb.local:chronicle_secondary_restartable_sup<0.240.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,chronicle_secondary_restartable_sup}
+    started: [{pid,<0.242.0>},
+              {id,chronicle_failover},
+              {mfargs,{chronicle_failover,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.221Z,ns_1@cb.local:<0.238.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.238.0>,dynamic_supervisor}
+    started: [{pid,<0.240.0>},
+              {id,chronicle_secondary_restartable_sup},
+              {mfargs,{chronicle_secondary_restartable_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.222Z,ns_1@cb.local:<0.238.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.238.0>,dynamic_supervisor}
+    started: [{pid,<0.243.0>},
+              {id,chronicle_server},
+              {mfargs,{chronicle_server,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.236Z,ns_1@cb.local:<0.246.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.246.0>,chronicle_single_rsm_sup}
+    started: [{pid,<0.247.0>},
+              {id,chronicle_config_rsm},
+              {mfargs,{chronicle_rsm,start_link,
+                                     [chronicle_config_rsm,
+                                      <<"89253481a8688adf75d324021119d7fb">>,
+                                      chronicle_config_rsm,[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.236Z,ns_1@cb.local:<0.245.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.245.0>,dynamic_supervisor}
+    started: [{pid,<0.246.0>},
+              {id,chronicle_config_rsm},
+              {mfargs,
+                  {chronicle_single_rsm_sup,start_link,
+                      [chronicle_config_rsm,
+                       <<"89253481a8688adf75d324021119d7fb">>,
+                       chronicle_config_rsm,[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.238Z,ns_1@cb.local:<0.249.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.249.0>,chronicle_single_rsm_sup}
+    started: [{pid,<0.250.0>},
+              {id,'kv-events'},
+              {mfargs,{gen_event,start_link,[{local,'kv-events'}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.248Z,ns_1@cb.local:<0.249.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.249.0>,chronicle_single_rsm_sup}
+    started: [{pid,<0.251.0>},
+              {id,kv},
+              {mfargs,{chronicle_rsm,start_link,
+                                     [kv,
+                                      <<"89253481a8688adf75d324021119d7fb">>,
+                                      chronicle_kv,[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.248Z,ns_1@cb.local:<0.245.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.245.0>,dynamic_supervisor}
+    started: [{pid,<0.249.0>},
+              {id,kv},
+              {mfargs,
+                  {chronicle_single_rsm_sup,start_link,
+                      [kv,<<"89253481a8688adf75d324021119d7fb">>,chronicle_kv,
+                       []]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.248Z,ns_1@cb.local:<0.238.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.238.0>,dynamic_supervisor}
+    started: [{pid,<0.244.0>},
+              {id,chronicle_rsm_sup},
+              {mfargs,{chronicle_rsm_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.249Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.222.0>},
+              {id,chronicle_local},
+              {mfargs,{chronicle_local,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.250Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.253.0>},
+              {id,ns_cluster},
+              {mfargs,{ns_cluster,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.251Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.255.0>},
+              {id,sigar},
+              {mfargs,{sigar,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.253Z,ns_1@cb.local:ns_config_sup<0.256.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_config_sup}
+    started: [{pid,<0.257.0>},
+              {id,tombstone_keeper},
+              {mfargs,{tombstone_keeper,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.253Z,ns_1@cb.local:ns_config_sup<0.256.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_config_sup}
+    started: [{pid,<0.258.0>},
+              {id,ns_config_events},
+              {mfargs,{gen_event,start_link,[{local,ns_config_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.253Z,ns_1@cb.local:ns_config_sup<0.256.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_config_sup}
+    started: [{pid,<0.259.0>},
+              {id,ns_config_events_local},
+              {mfargs,{gen_event,start_link,[{local,ns_config_events_local}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.286Z,ns_1@cb.local:ns_config_sup<0.256.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_config_sup}
+    started: [{pid,<0.260.0>},
+              {id,ns_config},
+              {mfargs,{ns_config,start_link,
+                                 ["/opt/couchbase/etc/couchbase/config",
+                                  ns_config_default]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.286Z,ns_1@cb.local:ns_config_sup<0.256.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_config_sup}
+    started: [{pid,<0.263.0>},
+              {id,ns_config_remote},
+              {mfargs,{ns_config_replica,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.287Z,ns_1@cb.local:ns_config_sup<0.256.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_config_sup}
+    started: [{pid,<0.264.0>},
+              {id,ns_config_log},
+              {mfargs,{ns_config_log,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.287Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.256.0>},
+              {id,ns_config_sup},
+              {mfargs,{ns_config_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.288Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.266.0>},
+              {id,netconfig_updater},
+              {mfargs,{netconfig_updater,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.290Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.269.0>},
+              {id,json_rpc_connection_sup},
+              {mfargs,{json_rpc_connection_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.293Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.272.0>},
+              {name,chronicle_compat_events},
+              {mfargs,{chronicle_compat_events,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,5000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:18.294Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.277.0>},
+              {name,remote_monitors},
+              {mfargs,{remote_monitors,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:18.295Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.278.0>},
+              {name,menelaus_barrier},
+              {mfargs,{menelaus_sup,barrier_start_link,[]}},
+              {restart_type,temporary},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:18.296Z,ns_1@cb.local:rest_lhttpc_pool_sup<0.279.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,rest_lhttpc_pool_sup}
+    started: [{pid,<0.280.0>},
+              {name,rest_lhttpc_pool},
+              {mfargs,{lhttpc_manager,start_link,
+                                      [[{name,rest_lhttpc_pool},
+                                        {connection_timeout,120000},
+                                        {pool_size,20}]]}},
+              {restart_type,{permanent,1}},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:18.296Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.279.0>},
+              {name,rest_lhttpc_pool_sup},
+              {mfargs,{rest_lhttpc_pool_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:18.298Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.281.0>},
+              {name,memcached_refresh},
+              {mfargs,{memcached_refresh,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:18.299Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.282.0>},
+              {name,ns_secrets},
+              {mfargs,{ns_secrets,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:18.300Z,ns_1@cb.local:ns_ssl_services_sup<0.283.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_ssl_services_sup}
+    started: [{pid,<0.284.0>},
+              {id,ssl_service_events},
+              {mfargs,{gen_event,start_link,[{local,ssl_service_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.592Z,ns_1@cb.local:ns_ssl_services_sup<0.283.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_ssl_services_sup}
+    started: [{pid,<0.285.0>},
+              {id,ns_ssl_services_setup},
+              {mfargs,{ns_ssl_services_setup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.613Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{auto_connect,'couchdb_ns_1@cb.local',
+                          {1,#Ref<0.1455559090.1431699458.164336>}}}
+[error_logger:info,2026-02-13T16:55:18.613Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{'EXIT',<0.314.0>,shutdown}}
+[error_logger:info,2026-02-13T16:55:18.613Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{net_kernel,1310,nodedown,'couchdb_ns_1@cb.local'}}
+[error_logger:info,2026-02-13T16:55:18.631Z,ns_1@cb.local:<0.303.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.303.0>,menelaus_web}
+    started: [{pid,<0.317.0>},
+              {id,menelaus_web_ipv4},
+              {mfargs,
+                  {menelaus_web,http_server,
+                      [[{afamily,inet},
+                        {ssl,true},
+                        {name,menelaus_web_ssl},
+                        {ssl_opts_fun,#Fun<ns_ssl_services_setup.8.31746748>},
+                        {port,18091},
+                        {nodelay,true},
+                        {approot,
+                            "/opt/couchbase/lib/ns_server/erlang/lib/ns_server/priv/public"}]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.636Z,ns_1@cb.local:<0.303.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.303.0>,menelaus_web}
+    started: [{pid,<0.336.0>},
+              {id,menelaus_web_ipv6},
+              {mfargs,
+                  {menelaus_web,http_server,
+                      [[{afamily,inet6},
+                        {ssl,true},
+                        {name,menelaus_web_ssl},
+                        {ssl_opts_fun,#Fun<ns_ssl_services_setup.8.31746748>},
+                        {port,18091},
+                        {nodelay,true},
+                        {approot,
+                            "/opt/couchbase/lib/ns_server/erlang/lib/ns_server/priv/public"}]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.636Z,ns_1@cb.local:ns_ssl_services_sup<0.283.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_ssl_services_sup}
+    started: [{pid,<0.301.0>},
+              {id,ns_rest_ssl_service},
+              {mfargs,
+                  {restartable,start_link,
+                      [{ns_ssl_services_setup,start_link_rest_service,[]},
+                       1000]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.636Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.283.0>},
+              {name,ns_ssl_services_sup},
+              {mfargs,{ns_ssl_services_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:18.641Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.355.0>},
+              {name,ldap_auth_cache},
+              {mfargs,{ldap_auth_cache,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:18.642Z,ns_1@cb.local:users_sup<0.357.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,users_sup}
+    started: [{pid,<0.358.0>},
+              {id,user_storage_events},
+              {mfargs,{gen_event,start_link,[{local,user_storage_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.645Z,ns_1@cb.local:users_storage_sup<0.359.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,users_storage_sup}
+    started: [{pid,<0.360.0>},
+              {id,users_replicator},
+              {mfargs,{menelaus_users,start_replicator,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.649Z,ns_1@cb.local:users_storage_sup<0.359.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,users_storage_sup}
+    started: [{pid,<0.361.0>},
+              {id,users_storage},
+              {mfargs,{menelaus_users,start_storage,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.649Z,ns_1@cb.local:users_sup<0.357.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,users_sup}
+    started: [{pid,<0.359.0>},
+              {id,users_storage_sup},
+              {mfargs,{users_storage_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.653Z,ns_1@cb.local:users_sup<0.357.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,users_sup}
+    started: [{pid,<0.363.0>},
+              {id,compiled_roles_cache},
+              {mfargs,{menelaus_roles,start_compiled_roles_cache,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.655Z,ns_1@cb.local:users_sup<0.357.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,users_sup}
+    started: [{pid,<0.366.0>},
+              {id,roles_cache},
+              {mfargs,{roles_cache,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.655Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.357.0>},
+              {name,users_sup},
+              {mfargs,{users_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:18.655Z,ns_1@cb.local:kernel_safe_sup<0.67.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,kernel_safe_sup}
+    started: [{pid,<0.370.0>},
+              {id,dets_sup},
+              {mfargs,{dets_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:18.656Z,ns_1@cb.local:kernel_safe_sup<0.67.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,kernel_safe_sup}
+    started: [{pid,<0.371.0>},
+              {id,dets},
+              {mfargs,{dets_server,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,2000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:18.676Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.375.0>},
+              {name,start_couchdb_node},
+              {mfargs,{ns_server_nodes_sup,start_couchdb_node,[]}},
+              {restart_type,{permanent,5}},
+              {shutdown,86400000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:18.676Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{auto_connect,'couchdb_ns_1@cb.local',
+                          {2,#Ref<0.1455559090.1431699458.164336>}}}
+[error_logger:info,2026-02-13T16:55:18.677Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{'EXIT',<0.379.0>,shutdown}}
+[error_logger:info,2026-02-13T16:55:18.677Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{net_kernel,1310,nodedown,'couchdb_ns_1@cb.local'}}
+[error_logger:info,2026-02-13T16:55:18.877Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{auto_connect,'couchdb_ns_1@cb.local',
+                          {3,#Ref<0.1455559090.1431699458.164336>}}}
+[error_logger:info,2026-02-13T16:55:18.896Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{'EXIT',<0.381.0>,{recv_challenge_failed,{error,closed}}}}
+[error_logger:info,2026-02-13T16:55:18.897Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{net_kernel,1310,nodedown,'couchdb_ns_1@cb.local'}}
+[error_logger:info,2026-02-13T16:55:19.097Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{auto_connect,'couchdb_ns_1@cb.local',
+                          {4,#Ref<0.1455559090.1431699458.164336>}}}
+[error_logger:info,2026-02-13T16:55:19.101Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{'EXIT',<0.383.0>,{recv_challenge_failed,{error,closed}}}}
+[error_logger:info,2026-02-13T16:55:19.101Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{net_kernel,1310,nodedown,'couchdb_ns_1@cb.local'}}
+[error_logger:info,2026-02-13T16:55:19.302Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{auto_connect,'couchdb_ns_1@cb.local',
+                          {5,#Ref<0.1455559090.1431699458.164336>}}}
+[error_logger:info,2026-02-13T16:55:19.303Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{'EXIT',<0.385.0>,{recv_challenge_failed,{error,closed}}}}
+[error_logger:info,2026-02-13T16:55:19.304Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{net_kernel,1310,nodedown,'couchdb_ns_1@cb.local'}}
+[error_logger:info,2026-02-13T16:55:19.504Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{auto_connect,'couchdb_ns_1@cb.local',
+                          {6,#Ref<0.1455559090.1431699458.164336>}}}
+[error_logger:info,2026-02-13T16:55:19.841Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.377.0>},
+              {name,wait_for_couchdb_node},
+              {mfargs,{erlang,apply,
+                              [#Fun<ns_server_nodes_sup.0.64114752>,[]]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.844Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.392.0>},
+              {name,ns_disksup},
+              {mfargs,{ns_disksup,start_link,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.844Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.393.0>},
+              {name,diag_handler_worker},
+              {mfargs,{work_queue,start_link,[diag_handler_worker]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.846Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.394.0>},
+              {name,dir_size},
+              {mfargs,{dir_size,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.847Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.395.0>},
+              {name,request_tracker},
+              {mfargs,{request_tracker,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.848Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.396.0>},
+              {name,chronicle_kv_log},
+              {mfargs,{chronicle_kv_log,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.850Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.398.0>},
+              {name,ns_log},
+              {mfargs,{ns_log,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.850Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.399.0>},
+              {name,event_log_events},
+              {mfargs,{gen_event,start_link,[{local,event_log_events}]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.851Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.400.0>},
+              {name,event_log_server},
+              {mfargs,{event_log_server,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,5000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.870Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.402.0>},
+              {name,initargs_updater},
+              {mfargs,{initargs_updater,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.871Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.404.0>},
+              {name,timer_lag_recorder},
+              {mfargs,{timer_lag_recorder,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:19.871Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.405.0>},
+              {name,ns_babysitter_log_consumer},
+              {mfargs,{ns_log,start_link_babysitter_log_consumer,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.018Z,ns_1@cb.local:ale_dynamic_sup<0.77.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ale_dynamic_sup}
+    started: [{pid,<0.413.0>},
+              {id,'sink-prometheus'},
+              {mfargs,
+                  {ale_dynamic_sup,delay_death,
+                      [{ale_disk_sink,start_link,
+                           ['sink-prometheus',
+                            "/opt/couchbase/var/lib/couchbase/logs/prometheus.log",
+                            [{rotation,
+                                 [{compress,true},
+                                  {size,41943040},
+                                  {num_files,10},
+                                  {buffer_size_max,52428800}]}]]},
+                       1000]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.074Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.406.0>},
+              {name,prometheus_cfg},
+              {mfargs,{prometheus_cfg,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.103Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.419.0>},
+              {name,memcached_passwords},
+              {mfargs,{memcached_passwords,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.106Z,ns_1@cb.local:inet_gethost_native_sup<0.422.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,inet_gethost_native_sup}
+    started: [{pid,<0.423.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+[error_logger:info,2026-02-13T16:55:20.106Z,ns_1@cb.local:kernel_safe_sup<0.67.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,kernel_safe_sup}
+    started: [{pid,<0.422.0>},
+              {id,inet_gethost_native_sup},
+              {mfargs,{inet_gethost_native,start_link,[]}},
+              {restart_type,temporary},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.117Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.424.0>},
+              {name,memcached_permissions},
+              {mfargs,{memcached_permissions,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.118Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.432.0>},
+              {name,ns_email_alert},
+              {mfargs,{ns_email_alert,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.119Z,ns_1@cb.local:ns_node_disco_sup<0.433.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_node_disco_sup}
+    started: [{pid,<0.434.0>},
+              {id,ns_node_disco_events},
+              {mfargs,{gen_event,start_link,[{local,ns_node_disco_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.119Z,ns_1@cb.local:ns_node_disco_sup<0.433.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_node_disco_sup}
+    started: [{pid,<0.435.0>},
+              {id,ns_node_disco},
+              {mfargs,{ns_node_disco,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.120Z,ns_1@cb.local:ns_node_disco_sup<0.433.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_node_disco_sup}
+    started: [{pid,<0.440.0>},
+              {id,ns_node_disco_log},
+              {mfargs,{ns_node_disco_log,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.123Z,ns_1@cb.local:ns_config_rep_sup<0.442.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_config_rep_sup}
+    started: [{pid,<0.443.0>},
+              {id,ns_config_rep_merger},
+              {mfargs,{ns_config_rep,start_link_merger,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.124Z,ns_1@cb.local:ns_config_rep_sup<0.442.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_config_rep_sup}
+    started: [{pid,<0.444.0>},
+              {id,ns_config_rep},
+              {mfargs,{ns_config_rep,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.124Z,ns_1@cb.local:ns_node_disco_sup<0.433.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_node_disco_sup}
+    started: [{pid,<0.442.0>},
+              {id,ns_config_rep_sup},
+              {mfargs,{ns_config_rep_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.124Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.433.0>},
+              {name,ns_node_disco_sup},
+              {mfargs,{ns_node_disco_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.125Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.454.0>},
+              {name,tombstone_agent},
+              {mfargs,{tombstone_agent,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.126Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.456.0>},
+              {name,vbucket_map_mirror},
+              {mfargs,{vbucket_map_mirror,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.127Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.458.0>},
+              {name,capi_url_cache},
+              {mfargs,{capi_url_cache,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.129Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.460.0>},
+              {name,bucket_info_cache},
+              {mfargs,{bucket_info_cache,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.129Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.463.0>},
+              {name,ns_tick_event},
+              {mfargs,{gen_event,start_link,[{local,ns_tick_event}]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.129Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.464.0>},
+              {name,buckets_events},
+              {mfargs,{gen_event,start_link,[{local,buckets_events}]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.129Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.465.0>},
+              {name,ns_stats_event},
+              {mfargs,{gen_event,start_link,[{local,ns_stats_event}]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.130Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.468.0>},
+              {name,samples_loader_tasks},
+              {mfargs,{samples_loader_tasks,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.133Z,ns_1@cb.local:ns_heart_sup<0.469.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_heart_sup}
+    started: [{pid,<0.470.0>},
+              {id,ns_heart},
+              {mfargs,{ns_heart,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.133Z,ns_1@cb.local:ns_heart_sup<0.469.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_heart_sup}
+    started: [{pid,<0.472.0>},
+              {id,ns_heart_slow_updater},
+              {mfargs,{ns_heart,start_link_slow_updater,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.133Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.469.0>},
+              {name,ns_heart_sup},
+              {mfargs,{ns_heart_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.134Z,ns_1@cb.local:ns_doctor_sup<0.477.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_doctor_sup}
+    started: [{pid,<0.478.0>},
+              {id,ns_doctor_events},
+              {mfargs,{gen_event,start_link,[{local,ns_doctor_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.137Z,ns_1@cb.local:ns_doctor_sup<0.477.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_doctor_sup}
+    started: [{pid,<0.484.0>},
+              {id,ns_doctor},
+              {mfargs,{ns_doctor,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.137Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.474.0>},
+              {name,ns_doctor_sup},
+              {mfargs,{restartable,start_link,
+                                   [{ns_doctor_sup,start_link,[]},infinity]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.137Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.488.0>},
+              {name,master_activity_events},
+              {mfargs,{gen_event,start_link,[{local,master_activity_events}]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.139Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.495.0>},
+              {name,xdcr_ckpt_store},
+              {mfargs,{simple_store,start_link,[xdcr_ckpt_data]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.139Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.496.0>},
+              {name,metakv_worker},
+              {mfargs,{work_queue,start_link,[metakv_worker]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.139Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.497.0>},
+              {name,index_events},
+              {mfargs,{gen_event,start_link,[{local,index_events}]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.139Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.498.0>},
+              {name,index_settings_manager},
+              {mfargs,{index_settings_manager,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.139Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.500.0>},
+              {name,query_settings_manager},
+              {mfargs,{query_settings_manager,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.140Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.502.0>},
+              {name,eventing_settings_manager},
+              {mfargs,{eventing_settings_manager,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.140Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.504.0>},
+              {name,analytics_settings_manager},
+              {mfargs,{analytics_settings_manager,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.140Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.506.0>},
+              {name,audit_events},
+              {mfargs,{gen_event,start_link,[{local,audit_events}]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.141Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.507.0>},
+              {name,user_limits_cache},
+              {mfargs,{user_request_throttler,start_limits_cache,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.142Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.509.0>},
+              {name,user_request_throttler},
+              {mfargs,{user_request_throttler,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.146Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.513.0>},
+              {id,menelaus_ui_auth},
+              {mfargs,{menelaus_ui_auth,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.146Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.515.0>},
+              {id,scram_sha},
+              {mfargs,{scram_sha,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.148Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.516.0>},
+              {id,menelaus_local_auth},
+              {mfargs,{menelaus_local_auth,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.151Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.517.0>},
+              {id,menelaus_web_cache},
+              {mfargs,{menelaus_web_cache,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.154Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.519.0>},
+              {id,menelaus_stats_gatherer},
+              {mfargs,{menelaus_stats_gatherer,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.155Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.520.0>},
+              {id,json_rpc_events},
+              {mfargs,{gen_event,start_link,[{local,json_rpc_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.160Z,ns_1@cb.local:menelaus_web_sup<0.521.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_web_sup}
+    started: [{pid,<0.522.0>},
+              {id,menelaus_event},
+              {mfargs,{menelaus_event,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.162Z,ns_1@cb.local:<0.524.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.524.0>,menelaus_web}
+    started: [{pid,<0.525.0>},
+              {id,menelaus_web_ipv4},
+              {mfargs,
+                  {menelaus_web,http_server,
+                      [[{afamily,inet},
+                        {name,menelaus_web},
+                        {port,8091},
+                        {nodelay,true},
+                        {approot,
+                            "/opt/couchbase/lib/ns_server/erlang/lib/ns_server/priv/public"}]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.164Z,ns_1@cb.local:<0.524.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.524.0>,menelaus_web}
+    started: [{pid,<0.542.0>},
+              {id,menelaus_web_ipv6},
+              {mfargs,
+                  {menelaus_web,http_server,
+                      [[{afamily,inet6},
+                        {name,menelaus_web},
+                        {port,8091},
+                        {nodelay,true},
+                        {approot,
+                            "/opt/couchbase/lib/ns_server/erlang/lib/ns_server/priv/public"}]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.164Z,ns_1@cb.local:menelaus_web_sup<0.521.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_web_sup}
+    started: [{pid,<0.523.0>},
+              {id,menelaus_web},
+              {mfargs,{restartable,start_link,
+                                   [{menelaus_web,start_link,[]},infinity]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.164Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.521.0>},
+              {id,menelaus_web_sup},
+              {mfargs,{menelaus_web_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.165Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.559.0>},
+              {id,hot_keys_keeper},
+              {mfargs,{hot_keys_keeper,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.165Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.560.0>},
+              {id,menelaus_web_alerts_srv},
+              {mfargs,{menelaus_web_alerts_srv,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,5000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.167Z,ns_1@cb.local:menelaus_sup<0.512.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,menelaus_sup}
+    started: [{pid,<0.561.0>},
+              {id,menelaus_cbauth},
+              {mfargs,{menelaus_cbauth,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.167Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.512.0>},
+              {name,menelaus},
+              {mfargs,{menelaus_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.167Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.567.0>},
+              {name,ns_ports_setup},
+              {mfargs,{ns_ports_setup,start,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.168Z,ns_1@cb.local:service_agent_sup<0.570.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_agent_sup}
+    started: [{pid,<0.571.0>},
+              {id,service_agent_children_sup},
+              {mfargs,{supervisor,start_link,
+                                  [{local,service_agent_children_sup},
+                                   service_agent_sup,child]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.168Z,ns_1@cb.local:service_agent_sup<0.570.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_agent_sup}
+    started: [{pid,<0.572.0>},
+              {id,service_agent_worker},
+              {mfargs,{erlang,apply,[#Fun<service_agent_sup.0.32483565>,[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.168Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.570.0>},
+              {name,service_agent_sup},
+              {mfargs,{service_agent_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.170Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.574.0>},
+              {name,ns_memcached_sockets_pool},
+              {mfargs,{ns_memcached_sockets_pool,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.172Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.575.0>},
+              {name,memcached_auth_server},
+              {mfargs,{memcached_auth_server,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.186Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.577.0>},
+              {name,ns_audit_cfg},
+              {mfargs,{ns_audit_cfg,start_link,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.188Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.582.0>},
+              {name,ns_audit},
+              {mfargs,{ns_audit,start_link,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.188Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.583.0>},
+              {name,memcached_config_mgr},
+              {mfargs,{memcached_config_mgr,start_link,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.189Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.584.0>},
+              {name,ns_memcached_log_rotator},
+              {mfargs,{ns_memcached_log_rotator,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.190Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.585.0>},
+              {name,testconditions_store},
+              {mfargs,{simple_store,start_link,[testconditions]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.191Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.586.0>},
+              {name,terse_cluster_info_uploader},
+              {mfargs,{terse_cluster_info_uploader,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.192Z,ns_1@cb.local:ns_bucket_worker_sup<0.588.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_bucket_worker_sup}
+    started: [{pid,<0.589.0>},
+              {id,ns_bucket_sup},
+              {mfargs,{ns_bucket_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.193Z,ns_1@cb.local:ns_bucket_worker_sup<0.588.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_bucket_worker_sup}
+    started: [{pid,<0.590.0>},
+              {id,ns_bucket_worker},
+              {mfargs,{ns_bucket_worker,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.194Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.588.0>},
+              {name,ns_bucket_worker_sup},
+              {mfargs,{ns_bucket_worker_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.195Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.592.0>},
+              {name,ns_server_stats},
+              {mfargs,{ns_server_stats,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.199Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.595.0>},
+              {name,{stats_reader,"@system"}},
+              {mfargs,{stats_reader,start_link,["@system"]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.200Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.597.0>},
+              {name,{stats_reader,"@system-processes"}},
+              {mfargs,{stats_reader,start_link,["@system-processes"]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.200Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.599.0>},
+              {name,{stats_reader,"@query"}},
+              {mfargs,{stats_reader,start_link,["@query"]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.200Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.601.0>},
+              {name,{stats_reader,"@global"}},
+              {mfargs,{stats_reader,start_link,["@global"]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.201Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.603.0>},
+              {name,goxdcr_status_keeper},
+              {mfargs,{goxdcr_status_keeper,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.203Z,ns_1@cb.local:services_stats_sup<0.604.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,services_stats_sup}
+    started: [{pid,<0.605.0>},
+              {id,service_stats_children_sup},
+              {mfargs,{supervisor,start_link,
+                                  [{local,service_stats_children_sup},
+                                   services_stats_sup,child]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.204Z,ns_1@cb.local:service_status_keeper_sup<0.606.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_status_keeper_sup}
+    started: [{pid,<0.607.0>},
+              {id,service_status_keeper_worker},
+              {mfargs,{work_queue,start_link,[service_status_keeper_worker]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.208Z,ns_1@cb.local:service_status_keeper_sup<0.606.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_status_keeper_sup}
+    started: [{pid,<0.609.0>},
+              {id,service_status_keeper_index},
+              {mfargs,{service_index,start_keeper,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.210Z,ns_1@cb.local:service_status_keeper_sup<0.606.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_status_keeper_sup}
+    started: [{pid,<0.613.0>},
+              {id,service_status_keeper_fts},
+              {mfargs,{service_fts,start_keeper,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.211Z,ns_1@cb.local:service_status_keeper_sup<0.606.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_status_keeper_sup}
+    started: [{pid,<0.616.0>},
+              {id,service_status_keeper_eventing},
+              {mfargs,{service_eventing,start_keeper,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.211Z,ns_1@cb.local:services_stats_sup<0.604.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,services_stats_sup}
+    started: [{pid,<0.606.0>},
+              {id,service_status_keeper_sup},
+              {mfargs,{service_status_keeper_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.214Z,ns_1@cb.local:services_stats_sup<0.604.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,services_stats_sup}
+    started: [{pid,<0.619.0>},
+              {id,service_stats_worker},
+              {mfargs,{erlang,apply,
+                              [#Fun<services_stats_sup.0.114823200>,[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.214Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.604.0>},
+              {name,services_stats_sup},
+              {mfargs,{services_stats_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.221Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.624.0>},
+              {name,compaction_daemon},
+              {mfargs,{compaction_daemon,start_link,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,86400000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.223Z,ns_1@cb.local:cluster_logs_sup<0.630.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,cluster_logs_sup}
+    started: [{pid,<0.632.0>},
+              {id,ets_holder},
+              {mfargs,{cluster_logs_collection_task,start_link_ets_holder,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.223Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.630.0>},
+              {name,cluster_logs_sup},
+              {mfargs,{cluster_logs_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.223Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.633.0>},
+              {name,collections},
+              {mfargs,{collections,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.223Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.635.0>},
+              {name,leader_events},
+              {mfargs,{gen_event,start_link,[{local,leader_events}]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.226Z,ns_1@cb.local:leader_leases_sup<0.638.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_leases_sup}
+    started: [{pid,<0.643.0>},
+              {id,leader_activities},
+              {mfargs,{leader_activities,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,10000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.228Z,ns_1@cb.local:leader_leases_sup<0.638.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_leases_sup}
+    started: [{pid,<0.645.0>},
+              {id,leader_lease_agent},
+              {mfargs,{leader_lease_agent,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.228Z,ns_1@cb.local:leader_services_sup<0.637.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_services_sup}
+    started: [{pid,<0.638.0>},
+              {id,leader_leases_sup},
+              {mfargs,{leader_leases_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.231Z,ns_1@cb.local:leader_registry_sup<0.646.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_registry_sup}
+    started: [{pid,<0.656.0>},
+              {id,leader_registry},
+              {mfargs,{leader_registry,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.238Z,ns_1@cb.local:mb_master_sup<0.666.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.668.0>},
+              {id,leader_lease_acquirer},
+              {mfargs,{leader_lease_acquirer,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,10000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.241Z,ns_1@cb.local:mb_master_sup<0.666.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.672.0>},
+              {id,leader_quorum_nodes_manager},
+              {mfargs,{leader_quorum_nodes_manager,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.244Z,ns_1@cb.local:mb_master_sup<0.666.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.679.0>},
+              {id,ns_tick},
+              {mfargs,{ns_tick,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,10},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.249Z,ns_1@cb.local:mb_master_sup<0.666.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.689.0>},
+              {id,chronicle_master},
+              {mfargs,{chronicle_master,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.250Z,ns_1@cb.local:ns_orchestrator_sup<0.692.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_sup}
+    started: [{pid,<0.693.0>},
+              {id,compat_mode_events},
+              {mfargs,{gen_event,start_link,[{local,compat_mode_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:error,2026-02-13T16:55:20.282Z,ns_1@cb.local:logger_proxy<0.70.0>:ale_error_logger_handler:do_log:101]Error in process <0.700.0> on node 'ns_1@cb.local' with exit value:
+{{badmatch,{error,couldnt_connect_to_memcached}},
+ [{ns_memcached,'-config_validate/2-fun-0-',2,
+                [{file,"src/ns_memcached.erl"},{line,1591}]},
+  {async,'-async_init/4-fun-1-',3,[{file,"src/async.erl"},{line,191}]}]}
+
+[error_logger:error,2026-02-13T16:55:20.289Z,ns_1@cb.local:memcached_config_mgr<0.583.0>:ale_error_logger_handler:do_log:101]
+=========================ERROR REPORT=========================
+** Generic server <0.583.0> terminating 
+** Last message in was do_check
+** When Server state == {state,<16118.135.0>,
+                               <<"{\n  \"active_external_users_push_interval\": 600,\n  \"admin\": \"@ns_server\",\n  \"audit_file\": \"/opt/couchbase/var/lib/couchbase/config/audit.json\",\n  \"breakpad\": {\n    \"enabled\": true,\n    "...>>,
+                               undefined}
+** Reason for termination ==
+** {{badmatch,{error,couldnt_connect_to_memcached}},
+    [{ns_memcached,'-config_validate/2-fun-0-',2,
+                   [{file,"src/ns_memcached.erl"},{line,1591}]},
+     {async,'-async_init/4-fun-1-',3,[{file,"src/async.erl"},{line,191}]}]}
+
+[error_logger:error,2026-02-13T16:55:20.293Z,ns_1@cb.local:memcached_config_mgr<0.583.0>:ale_error_logger_handler:do_log:101]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: memcached_config_mgr:init/1
+    pid: <0.583.0>
+    registered_name: memcached_config_mgr
+    exception error: no match of right hand side value {error,
+                                                        couldnt_connect_to_memcached}
+      in function  ns_memcached:'-config_validate/2-fun-0-'/2 (src/ns_memcached.erl, line 1591)
+      in call from async:'-async_init/4-fun-1-'/3 (src/async.erl, line 191)
+    ancestors: [ns_server_sup,ns_server_nodes_sup,<0.270.0>,
+                  ns_server_cluster_sup,root_sup,<0.146.0>]
+    message_queue_len: 2
+    messages: [upload_tls_config,do_check]
+    links: [<0.391.0>,<0.681.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 29
+    reductions: 59752
+  neighbours:
+
+[error_logger:info,2026-02-13T16:55:20.319Z,ns_1@cb.local:ns_orchestrator_sup<0.692.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_sup}
+    started: [{pid,<0.694.0>},
+              {id,compat_mode_manager},
+              {mfargs,{compat_mode_manager,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.322Z,ns_1@cb.local:ns_orchestrator_child_sup<0.735.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_child_sup}
+    started: [{pid,<0.736.0>},
+              {id,ns_janitor_server},
+              {mfargs,{ns_janitor_server,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.323Z,ns_1@cb.local:ns_orchestrator_child_sup<0.735.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_child_sup}
+    started: [{pid,<0.737.0>},
+              {id,auto_reprovision},
+              {mfargs,{auto_reprovision,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.324Z,ns_1@cb.local:ns_orchestrator_child_sup<0.735.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_child_sup}
+    started: [{pid,<0.738.0>},
+              {id,auto_rebalance},
+              {mfargs,{auto_rebalance,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.324Z,ns_1@cb.local:ns_orchestrator_child_sup<0.735.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_child_sup}
+    started: [{pid,<0.739.0>},
+              {id,ns_orchestrator},
+              {mfargs,{ns_orchestrator,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.325Z,ns_1@cb.local:ns_orchestrator_sup<0.692.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_sup}
+    started: [{pid,<0.735.0>},
+              {id,ns_orchestrator_child_sup},
+              {mfargs,{ns_orchestrator_child_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.328Z,ns_1@cb.local:ns_orchestrator_sup<0.692.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_sup}
+    started: [{pid,<0.741.0>},
+              {id,auto_failover},
+              {mfargs,{auto_failover,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.328Z,ns_1@cb.local:mb_master_sup<0.666.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.692.0>},
+              {id,ns_orchestrator_sup},
+              {mfargs,{ns_orchestrator_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.329Z,ns_1@cb.local:mb_master_sup<0.666.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.749.0>},
+              {id,tombstone_purger},
+              {mfargs,{tombstone_purger,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.332Z,ns_1@cb.local:mb_master_sup<0.666.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.751.0>},
+              {id,license_reporting},
+              {mfargs,{license_reporting,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.332Z,ns_1@cb.local:leader_registry_sup<0.646.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_registry_sup}
+    started: [{pid,<0.661.0>},
+              {id,mb_master},
+              {mfargs,{mb_master,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.332Z,ns_1@cb.local:leader_services_sup<0.637.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_services_sup}
+    started: [{pid,<0.646.0>},
+              {id,leader_registry_sup},
+              {mfargs,{leader_registry_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.332Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.636.0>},
+              {name,leader_services_sup},
+              {mfargs,{restartable,start_link,
+                                   [{leader_services_sup,start_link,[]},
+                                    infinity]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.333Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.754.0>},
+              {name,ns_tick_agent},
+              {mfargs,{ns_tick_agent,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.333Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.756.0>},
+              {name,master_activity_events_ingress},
+              {mfargs,{gen_event,start_link,
+                                 [{local,master_activity_events_ingress}]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.334Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.757.0>},
+              {name,master_activity_events_timestamper},
+              {mfargs,{master_activity_events,start_link_timestamper,[]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.335Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.758.0>},
+              {name,master_activity_events_pids_watcher},
+              {mfargs,{master_activity_events_pids_watcher,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.336Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.759.0>},
+              {name,master_activity_events_keeper},
+              {mfargs,{master_activity_events_keeper,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.339Z,ns_1@cb.local:health_monitor_sup<0.761.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,health_monitor_sup}
+    started: [{pid,<0.762.0>},
+              {id,ns_server_monitor},
+              {mfargs,{ns_server_monitor,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.339Z,ns_1@cb.local:health_monitor_sup<0.761.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,health_monitor_sup}
+    started: [{pid,<0.764.0>},
+              {id,service_monitor_children_sup},
+              {mfargs,{supervisor,start_link,
+                                  [{local,service_monitor_children_sup},
+                                   health_monitor_sup,child]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.339Z,ns_1@cb.local:health_monitor_sup<0.761.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,health_monitor_sup}
+    started: [{pid,<0.765.0>},
+              {id,service_monitor_worker},
+              {mfargs,{erlang,apply,[#Fun<health_monitor_sup.0.70530162>,[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.341Z,ns_1@cb.local:health_monitor_sup<0.761.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,health_monitor_sup}
+    started: [{pid,<0.771.0>},
+              {id,node_monitor},
+              {mfargs,{node_monitor,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.341Z,ns_1@cb.local:health_monitor_sup<0.761.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,health_monitor_sup}
+    started: [{pid,<0.777.0>},
+              {id,node_status_analyzer},
+              {mfargs,{node_status_analyzer,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.342Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.761.0>},
+              {name,health_monitor_sup},
+              {mfargs,{health_monitor_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.343Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.779.0>},
+              {name,rebalance_agent},
+              {mfargs,{rebalance_agent,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,5000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.346Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.780.0>},
+              {name,ns_rebalance_report_manager},
+              {mfargs,{ns_rebalance_report_manager,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:error,2026-02-13T16:55:20.346Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================SUPERVISOR REPORT=========================
+    supervisor: {local,ns_server_sup}
+    errorContext: child_terminated
+    reason: {{badmatch,{error,couldnt_connect_to_memcached}},
+             [{ns_memcached,'-config_validate/2-fun-0-',2,
+                            [{file,"src/ns_memcached.erl"},{line,1591}]},
+              {async,'-async_init/4-fun-1-',3,
+                     [{file,"src/async.erl"},{line,191}]}]}
+    offender: [{pid,<0.583.0>},
+               {name,memcached_config_mgr},
+               {mfargs,{memcached_config_mgr,start_link,[]}},
+               {restart_type,{permanent,4}},
+               {shutdown,1000},
+               {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.346Z,ns_1@cb.local:ns_server_nodes_sup<0.271.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_nodes_sup}
+    started: [{pid,<0.391.0>},
+              {name,ns_server_sup},
+              {mfargs,{ns_server_sup,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+[error_logger:info,2026-02-13T16:55:20.347Z,ns_1@cb.local:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.782.0>},
+              {name,memcached_config_mgr},
+              {mfargs,{memcached_config_mgr,start_link,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T16:55:20.347Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.270.0>},
+              {id,ns_server_nodes_sup},
+              {mfargs,{restartable,start_link,
+                                   [{ns_server_nodes_sup,start_link,[]},
+                                    infinity]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.349Z,ns_1@cb.local:ns_server_cluster_sup<0.218.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_cluster_sup}
+    started: [{pid,<0.784.0>},
+              {id,remote_api},
+              {mfargs,{remote_api,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T16:55:20.349Z,ns_1@cb.local:root_sup<0.196.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,root_sup}
+    started: [{pid,<0.218.0>},
+              {id,ns_server_cluster_sup},
+              {mfargs,{ns_server_cluster_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T16:55:20.349Z,ns_1@cb.local:application_controller<0.44.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    application: ns_server
+    started_at: 'ns_1@cb.local'
+
+[error_logger:info,2026-02-13T17:52:25.768Z,ns_1@cb.local:net_kernel<0.212.0>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{net_kernel,858,nodedown,'ns_1@cb.local'}}
+[error_logger:error,2026-02-13T17:52:25.768Z,nonode@nohost:cb_dist<0.209.0>:ale_error_logger_handler:do_log:101]cb_dist: terminating with reason: shutdown
+[error_logger:info,2026-02-13T17:52:25.770Z,nonode@nohost:ssl_dist_admin_sup<0.20040.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ssl_dist_admin_sup}
+    started: [{pid,<0.20041.3>},
+              {id,ssl_pem_cache_dist},
+              {mfargs,{ssl_pem_cache,start_link_dist,[[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.770Z,nonode@nohost:ssl_dist_admin_sup<0.20040.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ssl_dist_admin_sup}
+    started: [{pid,<0.20042.3>},
+              {id,ssl_dist_manager},
+              {mfargs,{ssl_manager,start_link_dist,[[]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.770Z,nonode@nohost:ssl_dist_sup<0.20039.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ssl_dist_sup}
+    started: [{pid,<0.20040.3>},
+              {id,ssl_dist_admin_sup},
+              {mfargs,{ssl_dist_admin_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.771Z,nonode@nohost:tls_dist_sup<0.20043.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_sup}
+    started: [{pid,<0.20044.3>},
+              {id,dist_tls_connection_sup},
+              {mfargs,{tls_connection_sup,start_link_dist,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.771Z,nonode@nohost:tls_dist_server_sup<0.20045.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_server_sup}
+    started: [{pid,<0.20046.3>},
+              {id,dist_ssl_listen_tracker_sup},
+              {mfargs,{ssl_listen_tracker_sup,start_link_dist,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.771Z,nonode@nohost:tls_dist_server_sup<0.20045.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_server_sup}
+    started: [{pid,<0.20047.3>},
+              {id,dist_tls_server_session_ticket},
+              {mfargs,{tls_server_session_ticket_sup,start_link_dist,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.771Z,nonode@nohost:tls_dist_server_sup<0.20045.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_server_sup}
+    started: [{pid,<0.20048.3>},
+              {id,dist_ssl_upgrade_server_session_cache_sup},
+              {mfargs,
+                  {ssl_upgrade_server_session_cache_sup,start_link_dist,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.771Z,nonode@nohost:tls_dist_sup<0.20043.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,tls_dist_sup}
+    started: [{pid,<0.20045.3>},
+              {id,tls_dist_server_sup},
+              {mfargs,{tls_dist_server_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.771Z,nonode@nohost:ssl_dist_sup<0.20039.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ssl_dist_sup}
+    started: [{pid,<0.20043.3>},
+              {id,tls_dist_sup},
+              {mfargs,{tls_dist_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,4000},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.771Z,nonode@nohost:net_sup<0.20038.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.20039.3>},
+              {id,ssl_dist_sup},
+              {mfargs,{ssl_dist_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.774Z,nonode@nohost:net_sup<0.20038.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.20049.3>},
+              {id,cb_dist},
+              {mfargs,{cb_dist,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.774Z,nonode@nohost:net_sup<0.20038.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.20050.3>},
+              {id,cb_epmd},
+              {mfargs,{cb_epmd,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,2000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.774Z,nonode@nohost:net_sup<0.20038.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.20051.3>},
+              {id,auth},
+              {mfargs,{auth,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,2000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.775Z,ns_1@127.0.0.1:net_sup<0.20038.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,net_sup}
+    started: [{pid,<0.20052.3>},
+              {id,net_kernel},
+              {mfargs,{net_kernel,start_link,
+                                  [#{clean_halt => false,
+                                     name => 'ns_1@127.0.0.1',
+                                     name_domain => longnames,
+                                     net_tickintensity => 4,
+                                     net_ticktime => 60,
+                                     supervisor => net_sup_dynamic}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,2000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.775Z,ns_1@127.0.0.1:kernel_sup<0.49.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,kernel_sup}
+    started: [{pid,<0.20038.3>},
+              {id,net_sup_dynamic},
+              {mfargs,
+                  {erl_distribution,start_link,
+                      [#{clean_halt => false,name => 'ns_1@127.0.0.1',
+                         name_domain => longnames,net_tickintensity => 4,
+                         net_ticktime => 60,supervisor => net_sup_dynamic}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,supervisor}]
+
+[error_logger:error,2026-02-13T17:52:25.776Z,ns_1@127.0.0.1:net_kernel<0.20052.3>:ale_error_logger_handler:do_log:101]
+=========================ERROR REPORT=========================
+
+** Cannot get connection id for node 'ns_1@127.0.0.1'
+
+[error_logger:info,2026-02-13T17:52:25.776Z,ns_1@127.0.0.1:net_kernel<0.20052.3>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{'EXIT',<0.20059.3>,shutdown}}
+[error_logger:info,2026-02-13T17:52:25.791Z,ns_1@127.0.0.1:net_kernel<0.20052.3>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{connect,normal,'babysitter_of_ns_1@cb.local'}}
+[error_logger:info,2026-02-13T17:52:25.875Z,ns_1@127.0.0.1:net_kernel<0.20052.3>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{'EXIT',<0.20073.3>,{recv_challenge_reply_failed,{error,closed}}}}
+[error_logger:info,2026-02-13T17:52:25.919Z,ns_1@127.0.0.1:net_kernel<0.20052.3>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{connect,normal,'couchdb_ns_1@cb.local'}}
+[error_logger:error,2026-02-13T17:52:25.919Z,ns_1@127.0.0.1:mb_master_sup<0.666.0>:ale_error_logger_handler:do_log:101]
+=========================SUPERVISOR REPORT=========================
+    supervisor: {local,mb_master_sup}
+    errorContext: child_terminated
+    reason: {shutdown,
+                {quorum_nodes_update_conflict,
+                    ['ns_1@cb.local'],
+                    ['ns_1@127.0.0.1']}}
+    offender: [{pid,<0.672.0>},
+               {id,leader_quorum_nodes_manager},
+               {mfargs,{leader_quorum_nodes_manager,start_link,[]}},
+               {restart_type,permanent},
+               {significant,false},
+               {shutdown,1000},
+               {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.920Z,ns_1@127.0.0.1:mb_master_sup<0.666.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.20080.3>},
+              {id,leader_quorum_nodes_manager},
+              {mfargs,{leader_quorum_nodes_manager,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.973Z,ns_1@127.0.0.1:net_kernel<0.20052.3>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{'EXIT',<0.20095.3>,{recv_challenge_reply_failed,{error,closed}}}}
+[error_logger:info,2026-02-13T17:52:25.975Z,ns_1@127.0.0.1:ns_doctor_sup<0.20101.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_doctor_sup}
+    started: [{pid,<0.20102.3>},
+              {id,ns_doctor_events},
+              {mfargs,{gen_event,start_link,[{local,ns_doctor_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.976Z,ns_1@127.0.0.1:ns_doctor_sup<0.20101.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_doctor_sup}
+    started: [{pid,<0.20103.3>},
+              {id,ns_doctor},
+              {mfargs,{ns_doctor,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.991Z,ns_1@127.0.0.1:leader_leases_sup<0.20124.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_leases_sup}
+    started: [{pid,<0.20125.3>},
+              {id,leader_activities},
+              {mfargs,{leader_activities,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,10000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.992Z,ns_1@127.0.0.1:leader_leases_sup<0.20124.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_leases_sup}
+    started: [{pid,<0.20126.3>},
+              {id,leader_lease_agent},
+              {mfargs,{leader_lease_agent,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.992Z,ns_1@127.0.0.1:leader_services_sup<0.20123.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_services_sup}
+    started: [{pid,<0.20124.3>},
+              {id,leader_leases_sup},
+              {mfargs,{leader_leases_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.992Z,ns_1@127.0.0.1:leader_registry_sup<0.20127.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_registry_sup}
+    started: [{pid,<0.20128.3>},
+              {id,leader_registry},
+              {mfargs,{leader_registry,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.993Z,ns_1@127.0.0.1:mb_master_sup<0.20132.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.20133.3>},
+              {id,leader_lease_acquirer},
+              {mfargs,{leader_lease_acquirer,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,10000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.993Z,ns_1@127.0.0.1:mb_master_sup<0.20132.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.20136.3>},
+              {id,leader_quorum_nodes_manager},
+              {mfargs,{leader_quorum_nodes_manager,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.993Z,ns_1@127.0.0.1:mb_master_sup<0.20132.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.20141.3>},
+              {id,ns_tick},
+              {mfargs,{ns_tick,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,10},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.994Z,ns_1@127.0.0.1:mb_master_sup<0.20132.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.20143.3>},
+              {id,chronicle_master},
+              {mfargs,{chronicle_master,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.994Z,ns_1@127.0.0.1:ns_orchestrator_sup<0.20146.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_sup}
+    started: [{pid,<0.20147.3>},
+              {id,compat_mode_events},
+              {mfargs,{gen_event,start_link,[{local,compat_mode_events}]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.994Z,ns_1@127.0.0.1:ns_orchestrator_sup<0.20146.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_sup}
+    started: [{pid,<0.20148.3>},
+              {id,compat_mode_manager},
+              {mfargs,{compat_mode_manager,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.994Z,ns_1@127.0.0.1:ns_orchestrator_child_sup<0.20149.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_child_sup}
+    started: [{pid,<0.20150.3>},
+              {id,ns_janitor_server},
+              {mfargs,{ns_janitor_server,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.994Z,ns_1@127.0.0.1:ns_orchestrator_child_sup<0.20149.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_child_sup}
+    started: [{pid,<0.20151.3>},
+              {id,auto_reprovision},
+              {mfargs,{auto_reprovision,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.995Z,ns_1@127.0.0.1:ns_orchestrator_child_sup<0.20149.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_child_sup}
+    started: [{pid,<0.20152.3>},
+              {id,auto_rebalance},
+              {mfargs,{auto_rebalance,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.995Z,ns_1@127.0.0.1:ns_orchestrator_child_sup<0.20149.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_child_sup}
+    started: [{pid,<0.20153.3>},
+              {id,ns_orchestrator},
+              {mfargs,{ns_orchestrator,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.995Z,ns_1@127.0.0.1:ns_orchestrator_sup<0.20146.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_sup}
+    started: [{pid,<0.20149.3>},
+              {id,ns_orchestrator_child_sup},
+              {mfargs,{ns_orchestrator_child_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.995Z,ns_1@127.0.0.1:ns_orchestrator_sup<0.20146.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_orchestrator_sup}
+    started: [{pid,<0.20155.3>},
+              {id,auto_failover},
+              {mfargs,{auto_failover,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.995Z,ns_1@127.0.0.1:mb_master_sup<0.20132.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.20146.3>},
+              {id,ns_orchestrator_sup},
+              {mfargs,{ns_orchestrator_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.996Z,ns_1@127.0.0.1:mb_master_sup<0.20132.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.20157.3>},
+              {id,tombstone_purger},
+              {mfargs,{tombstone_purger,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.996Z,ns_1@127.0.0.1:mb_master_sup<0.20132.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,mb_master_sup}
+    started: [{pid,<0.20159.3>},
+              {id,license_reporting},
+              {mfargs,{license_reporting,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:25.996Z,ns_1@127.0.0.1:leader_registry_sup<0.20127.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_registry_sup}
+    started: [{pid,<0.20130.3>},
+              {id,mb_master},
+              {mfargs,{mb_master,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:52:25.996Z,ns_1@127.0.0.1:leader_services_sup<0.20123.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,leader_services_sup}
+    started: [{pid,<0.20127.3>},
+              {id,leader_registry_sup},
+              {mfargs,{leader_registry_sup,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:error,2026-02-13T17:52:25.997Z,ns_1@127.0.0.1:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================SUPERVISOR REPORT=========================
+    supervisor: {local,ns_server_sup}
+    errorContext: child_terminated
+    reason: {shutdown,{memcached_port_server_down,<16118.135.0>,unpaused}}
+    offender: [{pid,<0.586.0>},
+               {name,terse_cluster_info_uploader},
+               {mfargs,{terse_cluster_info_uploader,start_link,[]}},
+               {restart_type,permanent},
+               {shutdown,1000},
+               {child_type,worker}]
+[error_logger:info,2026-02-13T17:52:25.997Z,ns_1@127.0.0.1:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.20163.3>},
+              {name,terse_cluster_info_uploader},
+              {mfargs,{terse_cluster_info_uploader,start_link,[]}},
+              {restart_type,permanent},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:error,2026-02-13T17:52:25.997Z,ns_1@127.0.0.1:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================SUPERVISOR REPORT=========================
+    supervisor: {local,ns_server_sup}
+    errorContext: child_terminated
+    reason: {shutdown,{memcached_port_server_down,<16118.135.0>,unpaused}}
+    offender: [{pid,<0.782.0>},
+               {name,memcached_config_mgr},
+               {mfargs,{memcached_config_mgr,start_link,[]}},
+               {restart_type,{permanent,4}},
+               {shutdown,1000},
+               {child_type,worker}]
+[error_logger:info,2026-02-13T17:52:25.998Z,ns_1@127.0.0.1:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.20166.3>},
+              {name,memcached_config_mgr},
+              {mfargs,{memcached_config_mgr,start_link,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T17:52:26.084Z,ns_1@127.0.0.1:service_stats_children_sup<0.605.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_stats_children_sup}
+    started: [{pid,<0.20241.3>},
+              {id,{service_fts,stats_reader,"@fts"}},
+              {mfargs,{stats_reader,start_link,["@fts"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:26.085Z,ns_1@127.0.0.1:service_stats_children_sup<0.605.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_stats_children_sup}
+    started: [{pid,<0.20243.3>},
+              {id,{service_index,stats_reader,"@index"}},
+              {mfargs,{stats_reader,start_link,["@index"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:26.086Z,ns_1@127.0.0.1:service_monitor_children_sup<0.764.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_monitor_children_sup}
+    started: [{pid,<0.20245.3>},
+              {id,{kv,dcp_traffic_monitor}},
+              {mfargs,{dcp_traffic_monitor,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:26.090Z,ns_1@127.0.0.1:service_agent_children_sup<0.571.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_agent_children_sup}
+    started: [{pid,<0.20247.3>},
+              {id,{service_agent,backup}},
+              {mfargs,{service_agent,start_link,[backup]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:26.090Z,ns_1@127.0.0.1:service_agent_children_sup<0.571.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_agent_children_sup}
+    started: [{pid,<0.20251.3>},
+              {id,{service_agent,fts}},
+              {mfargs,{service_agent,start_link,[fts]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:26.091Z,ns_1@127.0.0.1:service_agent_children_sup<0.571.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_agent_children_sup}
+    started: [{pid,<0.20255.3>},
+              {id,{service_agent,index}},
+              {mfargs,{service_agent,start_link,[index]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:26.091Z,ns_1@127.0.0.1:service_agent_children_sup<0.571.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_agent_children_sup}
+    started: [{pid,<0.20259.3>},
+              {id,{service_agent,n1ql}},
+              {mfargs,{service_agent,start_link,[n1ql]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:26.092Z,ns_1@127.0.0.1:service_monitor_children_sup<0.764.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_monitor_children_sup}
+    started: [{pid,<0.20263.3>},
+              {id,{kv,kv_stats_monitor}},
+              {mfargs,{kv_stats_monitor,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:52:26.099Z,ns_1@127.0.0.1:service_monitor_children_sup<0.764.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,service_monitor_children_sup}
+    started: [{pid,<0.20268.3>},
+              {id,{kv,kv_monitor}},
+              {mfargs,{kv_monitor,start_link,[]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:error,2026-02-13T17:52:26.769Z,ns_1@127.0.0.1:<0.405.0>:ale_error_logger_handler:do_log:101]
+=========================CRASH REPORT=========================
+  crasher:
+    initial call: ns_log:'-fun.babysitter_log_consumption_loop_tramp/0-'/0
+    pid: <0.405.0>
+    registered_name: []
+    exception exit: {{nodedown,'babysitter_of_ns_1@cb.local'},
+                     {gen_server,call,
+                         [{ns_babysitter_log,'babysitter_of_ns_1@cb.local'},
+                          consume,infinity]}}
+      in function  gen_server:call/3 (gen_server.erl, line 247)
+      in call from ns_log:babysitter_log_consumption_loop/0 (src/ns_log.erl, line 66)
+      in call from misc:delaying_crash/2 (src/misc.erl, line 1734)
+    ancestors: [ns_server_sup,ns_server_nodes_sup,<0.270.0>,
+                  ns_server_cluster_sup,root_sup,<0.146.0>]
+    message_queue_len: 4
+    messages: [{[alias|#Ref<0.1455559090.1431633922.164500>],superseded},
+                  {[alias|#Ref<15442.1455559090.1431633922.164511>],
+                   superseded},
+                  {[alias|#Ref<15442.1455559090.1431633922.164750>],
+                   superseded},
+                  {[alias|#Ref<15442.1455559090.1431633922.164879>],
+                   superseded}]
+    links: [<0.391.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 29
+    reductions: 7577
+  neighbours:
+
+[error_logger:error,2026-02-13T17:52:26.770Z,ns_1@127.0.0.1:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================SUPERVISOR REPORT=========================
+    supervisor: {local,ns_server_sup}
+    errorContext: child_terminated
+    reason: {{nodedown,'babysitter_of_ns_1@cb.local'},
+             {gen_server,call,
+                         [{ns_babysitter_log,'babysitter_of_ns_1@cb.local'},
+                          consume,infinity]}}
+    offender: [{pid,<0.405.0>},
+               {name,ns_babysitter_log_consumer},
+               {mfargs,{ns_log,start_link_babysitter_log_consumer,[]}},
+               {restart_type,{permanent,4}},
+               {shutdown,1000},
+               {child_type,worker}]
+[error_logger:info,2026-02-13T17:52:26.770Z,ns_1@127.0.0.1:ns_server_sup<0.391.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_server_sup}
+    started: [{pid,<0.20436.3>},
+              {name,ns_babysitter_log_consumer},
+              {mfargs,{ns_log,start_link_babysitter_log_consumer,[]}},
+              {restart_type,{permanent,4}},
+              {shutdown,1000},
+              {child_type,worker}]
+[error_logger:info,2026-02-13T17:52:32.776Z,ns_1@127.0.0.1:net_kernel<0.20052.3>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{'EXIT',<0.20057.3>,setup_timer_timeout}}
+[error_logger:info,2026-02-13T17:52:32.776Z,ns_1@127.0.0.1:net_kernel<0.20052.3>:ale_error_logger_handler:do_log:101]
+=========================NOTICE REPORT=========================
+{net_kernel,{net_kernel,1310,nodedown,'ns_1@cb.local'}}
+[error_logger:info,2026-02-13T17:53:47.578Z,ns_1@127.0.0.1:<0.23906.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.23906.3>,docs_kv_sup}
+    started: [{pid,<0.23909.3>},
+              {id,doc_replicator},
+              {mfargs,{capi_ddoc_manager,start_replicator,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.578Z,ns_1@127.0.0.1:<0.23906.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.23906.3>,docs_kv_sup}
+    started: [{pid,<0.23910.3>},
+              {id,doc_replication_srv},
+              {mfargs,{doc_replication_srv,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.582Z,ns_1@127.0.0.1:logger_proxy<0.70.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'capi_ddoc_manager_sup-notification'}
+    started: [{pid,<16119.2744.1>},
+              {id,capi_ddoc_manager_events},
+              {mfargs,
+                  {capi_ddoc_manager,start_link_event_manager,
+                      ["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.584Z,ns_1@127.0.0.1:logger_proxy<0.70.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'capi_ddoc_manager_sup-notification'}
+    started: [{pid,<16119.2745.1>},
+              {id,capi_ddoc_manager},
+              {mfargs,
+                  {capi_ddoc_manager,start_link,
+                      ["notification",<0.23909.3>,<0.23910.3>]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.583Z,ns_1@127.0.0.1:<0.23906.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.23906.3>,docs_kv_sup}
+    started: [{pid,<16119.2743.1>},
+              {id,capi_ddoc_manager_sup},
+              {mfargs,
+                  {capi_ddoc_manager_sup,start_link_remote,
+                      ['couchdb_ns_1@cb.local',"notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:53:47.589Z,ns_1@127.0.0.1:<0.23906.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.23906.3>,docs_kv_sup}
+    started: [{pid,<16119.2747.1>},
+              {id,capi_set_view_manager},
+              {mfargs,
+                  {capi_set_view_manager,start_link_remote,
+                      ['couchdb_ns_1@cb.local',"notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.594Z,ns_1@127.0.0.1:<0.23906.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.23906.3>,docs_kv_sup}
+    started: [{pid,<16119.2749.1>},
+              {id,couch_stats_reader},
+              {mfargs,
+                  {couch_stats_reader,start_link_remote,
+                      ['couchdb_ns_1@cb.local',"notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.594Z,ns_1@127.0.0.1:single_bucket_kv_sup-notification<0.23900.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'single_bucket_kv_sup-notification'}
+    started: [{pid,<0.23906.3>},
+              {id,{docs_kv_sup,"notification"}},
+              {mfargs,{docs_kv_sup,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:53:47.596Z,ns_1@127.0.0.1:<0.23923.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.23923.3>,ns_memcached_sup}
+    started: [{pid,<0.23924.3>},
+              {id,{ns_memcached,"notification"}},
+              {mfargs,{ns_memcached,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,86400000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.600Z,ns_1@127.0.0.1:<0.23923.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {<0.23923.3>,ns_memcached_sup}
+    started: [{pid,<0.23926.3>},
+              {id,{terse_bucket_info_uploader,"notification"}},
+              {mfargs,
+                  {terse_bucket_info_uploader,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.600Z,ns_1@127.0.0.1:single_bucket_kv_sup-notification<0.23900.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'single_bucket_kv_sup-notification'}
+    started: [{pid,<0.23923.3>},
+              {id,{ns_memcached_sup,"notification"}},
+              {mfargs,{ns_memcached_sup,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:53:47.604Z,ns_1@127.0.0.1:single_bucket_kv_sup-notification<0.23900.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'single_bucket_kv_sup-notification'}
+    started: [{pid,<0.23928.3>},
+              {id,{dcp_sup,"notification"}},
+              {mfargs,{dcp_sup,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:53:47.606Z,ns_1@127.0.0.1:single_bucket_kv_sup-notification<0.23900.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'single_bucket_kv_sup-notification'}
+    started: [{pid,<0.23929.3>},
+              {id,{dcp_replication_manager,"notification"}},
+              {mfargs,{dcp_replication_manager,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.607Z,ns_1@127.0.0.1:single_bucket_kv_sup-notification<0.23900.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'single_bucket_kv_sup-notification'}
+    started: [{pid,<0.23930.3>},
+              {id,{replication_manager,"notification"}},
+              {mfargs,{replication_manager,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.611Z,ns_1@127.0.0.1:janitor_agent_sup-notification<0.23931.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'janitor_agent_sup-notification'}
+    started: [{pid,<0.23932.3>},
+              {id,rebalance_subprocesses_registry},
+              {mfargs,
+                  {ns_process_registry,start_link,
+                      ['rebalance_subprocesses_registry-notification',
+                       [{terminate_command,kill}]]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,86400000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.614Z,ns_1@127.0.0.1:janitor_agent_sup-notification<0.23931.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'janitor_agent_sup-notification'}
+    started: [{pid,<0.23933.3>},
+              {id,janitor_agent},
+              {mfargs,{janitor_agent,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,brutal_kill},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.614Z,ns_1@127.0.0.1:single_bucket_kv_sup-notification<0.23900.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'single_bucket_kv_sup-notification'}
+    started: [{pid,<0.23931.3>},
+              {id,{janitor_agent_sup,"notification"}},
+              {mfargs,{janitor_agent_sup,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
+[error_logger:info,2026-02-13T17:53:47.614Z,ns_1@127.0.0.1:single_bucket_kv_sup-notification<0.23900.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'single_bucket_kv_sup-notification'}
+    started: [{pid,<0.23934.3>},
+              {id,{stats_reader,"notification"}},
+              {mfargs,{stats_reader,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.614Z,ns_1@127.0.0.1:single_bucket_kv_sup-notification<0.23900.3>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,'single_bucket_kv_sup-notification'}
+    started: [{pid,<0.23936.3>},
+              {id,{goxdcr_stats_reader,"notification"}},
+              {mfargs,{stats_reader,start_link,["@xdcr-notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,1000},
+              {child_type,worker}]
+
+[error_logger:info,2026-02-13T17:53:47.614Z,ns_1@127.0.0.1:ns_bucket_sup<0.589.0>:ale_error_logger_handler:do_log:101]
+=========================PROGRESS REPORT=========================
+    supervisor: {local,ns_bucket_sup}
+    started: [{pid,<0.23900.3>},
+              {id,{single_bucket_kv_sup,"notification"}},
+              {mfargs,{single_bucket_kv_sup,start_link,["notification"]}},
+              {restart_type,permanent},
+              {significant,false},
+              {shutdown,infinity},
+              {child_type,supervisor}]
+
