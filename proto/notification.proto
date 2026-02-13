@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package notification;
+
+option go_package = "github.com/frknbkts/notification-service/pkg/pb";
+
+service NotificationService {
+  rpc SendNotification (SendNotificationRequest) returns (SendNotificationResponse);
+  rpc GetNotifications (GetNotificationsRequest) returns (GetNotificationsResponse);
+  rpc MarkAsRead (MarkAsReadRequest) returns (MarkAsReadResponse);
+  rpc GetUnreadCount (GetUnreadCountRequest) returns (GetUnreadCountResponse);
+  
+  rpc StreamNotifications (StreamNotificationsRequest) returns (stream Notification);
+}
+
+enum NotificationType {
+  UNKNOWN = 0;
+  LIKE = 1;
+  COMMENT = 2;
+  FOLLOW = 3;
+  MENTION = 4;
+  SYSTEM = 5;
+}
+
+// Model (Entity)
+message Notification {
+  string id = 1;
+  string user_id = 2;
+  string sender_id = 3;
+  NotificationType type = 4;
+  string title = 5;
+  string body = 6;
+  string reference_id = 7;
+  bool is_read = 8;
+  int64 created_at = 9;
+}
+
+
+message SendNotificationRequest {
+  string user_id = 1;
+  string sender_id = 2;
+  NotificationType type = 3;
+  string title = 4;
+  string body = 5;
+  string reference_id = 6;
+}
+
+message SendNotificationResponse {
+  string id = 1;
+  bool success = 2;
+}
+
+message GetNotificationsRequest {
+  string user_id = 1;
+  int32 page = 2;
+  int32 limit = 3;
+}
+
+message GetNotificationsResponse {
+  repeated Notification notifications = 1; // List<Notification>
+  int32 total_count = 2;
+  int32 current_page = 3;
+}
+
+message MarkAsReadRequest {
+  string notification_id = 1;
+  string user_id = 2; // Güvenlik için user_id de alalım
+}
+
+message MarkAsReadResponse {
+  bool success = 1;
+}
+
+message GetUnreadCountRequest {
+  string user_id = 1;
+}
+
+message GetUnreadCountResponse {
+  int32 count = 1;
+}
+
+message StreamNotificationsRequest {
+  string user_id = 1;
+}
