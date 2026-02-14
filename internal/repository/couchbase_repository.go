@@ -29,7 +29,7 @@ func NewCouchbaseRepository(connectionString, username, password, bucketName str
 	}
 
 	bucket := cluster.Bucket(bucketName)
-	err = bucket.WaitUntilReady(5*time.Second, nil)
+	err = bucket.WaitUntilReady(20*time.Second, nil)
 	if err != nil {
 		return nil, fmt.Errorf("couchbase bucket hazir degil: %v", err)
 	}

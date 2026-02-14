@@ -1,15 +1,34 @@
-version: '3.8'
 
 services:
   couchbase:
     image: couchbase/server:7.2.0
     container_name: notification_couchbase
     ports:
-      - "8091:8091"   # Yönetim Paneli
-      - "8093:8093"   # Query Service (N1QL)
-      - "11210:11210" # Data Service 
+      - "8091:8091"
+      - "8093:8093"
+      - "11210:11210"
     environment:
       - COUCHBASE_ADMINISTRATOR_USERNAME=admin
       - COUCHBASE_ADMINISTRATOR_PASSWORD=password123
     volumes:
       - ./couchbase-data:/opt/couchbase/var
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8091/ui/index.html"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  notification-service:
+    build: .        
+    container_name: notification_app
+    ports:
+      - "50051:50051"   
+    environment:
+      - APP_PORT=:50051
+      - COUCHBASE_CONNECTION_STRING=couchbase://couchbase
+      - COUCHBASE_USERNAME=admin
+      - COUCHBASE_PASSWORD=password123
+      - COUCHBASE_BUCKET_NAME=notification
+    depends_on:
+      couchbase:
+        condition: service_healthy

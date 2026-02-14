@@ -18,11 +18,30 @@ import (
 
 func main() {
 	
-	port := ":50051"
-	cbConnStr := "couchbase://localhost"
-	cbUser := "admin"
-	cbPass := "password123"
-	cbBucket := "notification"
+port := os.Getenv("APP_PORT")
+	if port == "" {
+		port = ":50051"
+	}
+
+	cbConnStr := os.Getenv("COUCHBASE_CONNECTION_STRING")
+	if cbConnStr == "" {
+		cbConnStr = "couchbase://localhost"
+	}
+
+	cbUser := os.Getenv("COUCHBASE_USERNAME")
+	if cbUser == "" {
+		cbUser = "admin"
+	}
+
+	cbPass := os.Getenv("COUCHBASE_PASSWORD")
+	if cbPass == "" {
+		cbPass = "password123"
+	}
+
+	cbBucket := os.Getenv("COUCHBASE_BUCKET_NAME")
+	if cbBucket == "" {
+		cbBucket = "notification"
+	}
 
 	fmt.Println("Couchbase baglantisi kuruluyor...")
 	repo, err := repository.NewCouchbaseRepository(cbConnStr, cbUser, cbPass, cbBucket)
