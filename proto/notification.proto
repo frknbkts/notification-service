@@ -22,7 +22,6 @@ enum NotificationType {
   SYSTEM = 5;
 }
 
-// Model (Entity)
 message Notification {
   string id = 1;
   string user_id = 2;
@@ -34,7 +33,6 @@ message Notification {
   bool is_read = 8;
   int64 created_at = 9;
 }
-
 
 message SendNotificationRequest {
   string user_id = 1;
@@ -57,14 +55,14 @@ message GetNotificationsRequest {
 }
 
 message GetNotificationsResponse {
-  repeated Notification notifications = 1; // List<Notification>
+  repeated Notification notifications = 1;
   int32 total_count = 2;
   int32 current_page = 3;
 }
 
 message MarkAsReadRequest {
   string notification_id = 1;
-  string user_id = 2; // Güvenlik için user_id de alalım
+  string user_id = 2;
 }
 
 message MarkAsReadResponse {
