@@ -15,3 +15,5 @@ vendor/
 *.swp
 
 .env
+
+couchbase-data/
