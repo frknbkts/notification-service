@@ -8,14 +8,14 @@ Proje, modern mikroservis gereksinimlerini (Streaming, Rate Limiting, Observabil
 
 ## Özellikler ve Yetenekler
 
-### 1. Temel Fonksiyonlar (Core Features)
+### 1. Temel Fonksiyonlar
 - **SendNotification:** Yeni bildirim oluşturma, UUID atama ve veritabanına kaydetme.
 - **GetNotifications:** Kullanıcı bildirimlerini sayfalama (pagination) ile listeleme (N1QL).
 - **MarkAsRead:** Bildirimi okundu olarak işaretleme (Optimized `MutateIn` operation).
 - **GetUnreadCount:** Okunmamış bildirim sayısını getirme (`COUNT` aggregation).
 
-### 2. İleri Seviye Özellikler (Advanced Features - Bonus)
-- **📡 Server-Side Streaming (Live Updates):** `StreamNotifications` metodu ile kullanıcılara WebSocket benzeri canlı bildirim akışı sağlar. Go Channels ve Concurrency (Goroutines) kullanılarak implemente edilmiştir.
+### 2. Bonus Özellikler
+- **Server-Side Streaming (Live Updates):** `StreamNotifications` metodu ile kullanıcılara WebSocket benzeri canlı bildirim akışı sağlar. Go Channels ve Concurrency (Goroutines) kullanılarak implemente edilmiştir.
 - **Rate Limiting (Throttling):** Token Bucket algoritması kullanılarak servisi aşırı yükten koruyan Middleware katmanı eklenmiştir.
 - **Observability (Prometheus Metrics):** Sistem sağlığını ve anlık yükü izlemek için `/metrics` endpoint'i (Port: 9090) üzerinden Prometheus uyumlu veriler sunar.
 
