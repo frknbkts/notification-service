@@ -21,8 +21,8 @@ import (
 )
 
 func main() {
-	
-port := os.Getenv("APP_PORT")
+
+	port := os.Getenv("APP_PORT")
 	if port == "" {
 		port = ":50051"
 	}
@@ -55,13 +55,13 @@ port := os.Getenv("APP_PORT")
 	fmt.Println("Couchbase baglantisi basarili.")
 
 	notificationService := service.NewNotificationService(repo)
-	
 	rateLimiter := middleware.NewRateLimiterInterceptor(rate.Limit(100), 10)
 
 	grpcServer := grpc.NewServer(
 		grpc.ChainUnaryInterceptor(
-			rateLimiter.Unary(),          
-			middleware.MetricsInterceptor, 
+			middleware.LoggerInterceptor(),
+			rateLimiter.Unary(),
+			middleware.MetricsInterceptor,
 		),
 		grpc.ChainStreamInterceptor(
 			rateLimiter.Stream(),
@@ -79,7 +79,7 @@ port := os.Getenv("APP_PORT")
 		}
 	}()
 
-	lis, err := net.Listen("tcp", ":50051") 
+	lis, err := net.Listen("tcp", port)
 	if err != nil {
 		log.Fatalf("Port dinlenemedi: %v", err)
 	}
@@ -88,7 +88,7 @@ port := os.Getenv("APP_PORT")
 	signal.Notify(stopChan, os.Interrupt, syscall.SIGTERM)
 
 	go func() {
-		fmt.Printf("gRPC Sunucusu :50051 portunda calisiyor...\n")
+		fmt.Printf("gRPC Sunucusu %s portunda calisiyor...\n", port)
 		if err := grpcServer.Serve(lis); err != nil {
 			log.Fatalf("Sunucu hatasi: %v", err)
 		}

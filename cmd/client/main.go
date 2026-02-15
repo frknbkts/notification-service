@@ -21,14 +21,18 @@ func main() {
 	defer conn.Close()
 
 	client := pb.NewNotificationServiceClient(conn)
-	
+
 	streamCtx := context.Background()
+	rpcCtx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
+	defer cancel()
+
+	fmt.Println("NOTIFICATION CLIENT BASLATILIYOR...")
 
 	go func() {
-		fmt.Println("📡 Canlı Akışa Bağlanılıyor (StreamNotifications)...")
+		fmt.Println("[Stream] Canlı Akışa Bağlanılıyor...")
 		stream, err := client.StreamNotifications(streamCtx, &pb.StreamNotificationsRequest{UserId: "user_123"})
 		if err != nil {
-			log.Printf("Stream baslatma hatasi: %v", err)
+			log.Printf("Stream hatasi: %v", err)
 			return
 		}
 
@@ -41,43 +45,82 @@ func main() {
 				log.Printf("Stream okuma hatasi: %v", err)
 				return
 			}
-			fmt.Printf("\n🔔 [CANLI BİLDİRİM GELDİ!] %s: %s\n", notification.Title, notification.Body)
+			fmt.Printf("\n>>> CANLI YAYIN: Yeni Bildirim Geldi! <<<\n")
+			fmt.Printf("   Başlık: %s\n   İçerik: %s\n\n", notification.Title, notification.Body)
 		}
 	}()
 
 	time.Sleep(1 * time.Second)
 
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-
-	fmt.Println("\n--- Bildirim Gonderiliyor ---")
-	sendRes, err := client.SendNotification(ctx, &pb.SendNotificationRequest{
+	fmt.Println("--- 1. Yeni Bildirim Gonderiliyor (SendNotification) ---")
+	sendRes, err := client.SendNotification(rpcCtx, &pb.SendNotificationRequest{
 		UserId:   "user_123",
-		SenderId: "user_999",
-		Type:     pb.NotificationType_LIKE,
-		Title:    "Yeni Begeni",
-		Body:     "Ahmet fotrafini begendi",
+		SenderId: "system_bot",
+		Type:     pb.NotificationType_SYSTEM,
+		Title:    "Sistem Testi",
+		Body:     "Bu bildirim Client testi sirasinda otomatik olusturuldu.",
 	})
 	if err != nil {
 		log.Fatalf("Gonderim hatasi: %v", err)
 	}
-	fmt.Printf("✅ Bildirim Olusturuldu! ID: %s, Success: %v\n", sendRes.Id, sendRes.Success)
+	fmt.Printf("Bildirim Kaydedildi! ID: %s\n", sendRes.Id)
 
-	fmt.Println("\n--- Bildirimler Listeleniyor ---")
-	listRes, err := client.GetNotifications(ctx, &pb.GetNotificationsRequest{
+	time.Sleep(2 * time.Second)
+
+	fmt.Println("\n--- 2. Bildirimler Listeleniyor (GetNotifications) ---")
+	listRes, err := client.GetNotifications(rpcCtx, &pb.GetNotificationsRequest{
 		UserId: "user_123",
 		Page:   1,
-		Limit:  10,
+		Limit:  5,
 	})
 	if err != nil {
 		log.Fatalf("Listeleme hatasi: %v", err)
 	}
 
-	fmt.Printf("Toplam Bildirim Sayisi: %d\n", listRes.TotalCount)
+	var targetID string
 	for _, n := range listRes.Notifications {
-		fmt.Printf("- [%s] %s: %s (Okundu: %v)\n", n.Id, n.Title, n.Body, n.IsRead)
+		status := "OKUNMADI"
+		if n.IsRead {
+			status = "OKUNDU"
+		}
+
+		prefix := "-"
+		if n.Id == sendRes.Id {
+			prefix = "->"
+			targetID = n.Id
+		}
+		fmt.Printf("%s [%s] %s (%s)\n", prefix, n.Id, n.Title, status)
 	}
 
-	fmt.Println("\n(Canlı bildirimin ekrana düşmesi bekleniyor...)")
-	time.Sleep(2 * time.Second)
+	if targetID == "" {
+		log.Fatalf("Hata: Az once ekledigimiz bildirim listede gorunmuyor!")
+	}
+
+	fmt.Printf("\n--- 3. Bildirim Okunuyor: %s (MarkAsRead) ---\n", targetID)
+	readRes, err := client.MarkAsRead(rpcCtx, &pb.MarkAsReadRequest{
+		UserId:         "user_123",
+		NotificationId: targetID,
+	})
+	if err != nil {
+		log.Fatalf("Okuma hatasi: %v", err)
+	}
+	fmt.Printf("Islem Basarili mi: %v\n", readRes.Success)
+
+	fmt.Println("\n--- 4. Kontrol (GetUnreadCount & Verify) ---")
+
+	countRes, _ := client.GetUnreadCount(rpcCtx, &pb.GetUnreadCountRequest{UserId: "user_123"})
+	fmt.Printf("Kalan Okunmamis Sayisi: %d\n", countRes.Count)
+
+	verifyList, _ := client.GetNotifications(rpcCtx, &pb.GetNotificationsRequest{UserId: "user_123", Page: 1, Limit: 5})
+	for _, n := range verifyList.Notifications {
+		if n.Id == targetID {
+			if n.IsRead {
+				fmt.Printf("TEYIT BASARILI: Bildirim artik 'OKUNDU' olarak gorunuyor.\n")
+			} else {
+				fmt.Printf("HATA: Bildirim hala 'OKUNMADI' gorunuyor!\n")
+			}
+		}
+	}
+
+	fmt.Println("\nTest Senaryosu Tamamlandi.")
 }
