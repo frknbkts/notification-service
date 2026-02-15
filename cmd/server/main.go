@@ -4,13 +4,17 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 
+	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"golang.org/x/time/rate"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 
+	"github.com/frknbkts/notification-service/internal/middleware"
 	"github.com/frknbkts/notification-service/internal/repository"
 	"github.com/frknbkts/notification-service/internal/service"
 	"github.com/frknbkts/notification-service/pkg/pb"
@@ -51,31 +55,47 @@ port := os.Getenv("APP_PORT")
 	fmt.Println("Couchbase baglantisi basarili.")
 
 	notificationService := service.NewNotificationService(repo)
+	
+	rateLimiter := middleware.NewRateLimiterInterceptor(rate.Limit(100), 10)
 
-	lis, err := net.Listen("tcp", port)
+	grpcServer := grpc.NewServer(
+		grpc.ChainUnaryInterceptor(
+			rateLimiter.Unary(),          
+			middleware.MetricsInterceptor, 
+		),
+		grpc.ChainStreamInterceptor(
+			rateLimiter.Stream(),
+		),
+	)
+
+	pb.RegisterNotificationServiceServer(grpcServer, notificationService)
+	reflection.Register(grpcServer)
+
+	go func() {
+		http.Handle("/metrics", promhttp.Handler())
+		fmt.Println("Metrics server :9090 portunda calisiyor...")
+		if err := http.ListenAndServe(":9090", nil); err != nil {
+			log.Printf("Metrics sunucusu hatasi: %v", err)
+		}
+	}()
+
+	lis, err := net.Listen("tcp", ":50051") 
 	if err != nil {
 		log.Fatalf("Port dinlenemedi: %v", err)
 	}
-
-	grpcServer := grpc.NewServer()
-
-	pb.RegisterNotificationServiceServer(grpcServer, notificationService)
-
-	reflection.Register(grpcServer)
 
 	stopChan := make(chan os.Signal, 1)
 	signal.Notify(stopChan, os.Interrupt, syscall.SIGTERM)
 
 	go func() {
-		fmt.Printf("gRPC Sunucusu %s portunda calisiyor...\n", port)
+		fmt.Printf("gRPC Sunucusu :50051 portunda calisiyor...\n")
 		if err := grpcServer.Serve(lis); err != nil {
 			log.Fatalf("Sunucu hatasi: %v", err)
 		}
 	}()
 
 	<-stopChan
-	fmt.Println("\nKapanma sinyali alindi. Graceful shutdown baslatiliyor...")
-
+	fmt.Println("\nKapanma sinyali alindi...")
 	grpcServer.GracefulStop()
-	fmt.Println("Sunucu basariyla kapatildi.")
+	fmt.Println("Sunucu kapatildi.")
 }

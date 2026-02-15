@@ -1,4 +1,3 @@
-
 services:
   couchbase:
     image: couchbase/server:7.2.0
@@ -19,10 +18,11 @@ services:
       retries: 10
 
   notification-service:
-    build: .        
+    build: .
     container_name: notification_app
     ports:
-      - "50051:50051"   
+      - "50051:50051" # gRPC
+      - "9090:9090"   # Prometheus Metrics
     environment:
       - APP_PORT=:50051
       - COUCHBASE_CONNECTION_STRING=couchbase://couchbase
