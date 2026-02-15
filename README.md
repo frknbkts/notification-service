@@ -94,23 +94,6 @@ Business Logic, Repository katmanı Mocklanarak test edilmiştir. Veritabanına 
 
 go test ./... -v
 
-Mimari Kararlar ve Trade-off'lar
-Neden Couchbase?
-
-Bildirim verisi esnek şemaya (Schema-less) sahiptir.
-
-Yüksek yazma hızı (Write-heavy) ve Sub-millisecond erişim gerektirir.
-
-Key-Value erişimi (notification::UUID) ile çok hızlı okuma sağlar.
-
-Streaming vs Polling?
-
-İstemcinin sürekli sunucuya "yeni bildirim var mı?" diye sorması (Polling) yerine, gRPC Server-Side Streaming kullanılarak sunucunun istemciyi tetiklemesi sağlandı. Bu, gereksiz ağ trafiğini ve sunucu yükünü azaltır.
-
-Concurrency Yönetimi:
-
-Canlı yayın aboneleri (subscribers map) üzerinde aynı anda okuma/yazma yapılabilmesi için sync.RWMutex kullanılarak "Thread-Safety" sağlandı.
-
 Docker Healthcheck:
 
 Uygulamanın veritabanından önce başlayıp çökmesini (CrashLoopBackOff) engellemek için docker-compose tarafında Couchbase'in healthy durumu beklendi.
