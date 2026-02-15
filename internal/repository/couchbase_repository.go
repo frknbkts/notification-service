@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/couchbase/gocb/v2"
-	"github.com/google/uuid"
 	"github.com/frknbkts/notification-service/internal/core/domain"
 	"github.com/frknbkts/notification-service/internal/core/ports"
+	"github.com/google/uuid"
 )
 
 type CouchbaseRepository struct {
@@ -90,7 +90,7 @@ func (r *CouchbaseRepository) GetByUserID(ctx context.Context, userID string, li
 
 func (r *CouchbaseRepository) MarkAsRead(ctx context.Context, notificationID string, userID string) error {
 	docKey := fmt.Sprintf("notification::%s", notificationID)
-	
+
 	ops := []gocb.MutateInSpec{
 		gocb.UpsertSpec("is_read", true, nil),
 	}
@@ -98,7 +98,7 @@ func (r *CouchbaseRepository) MarkAsRead(ctx context.Context, notificationID str
 	_, err := r.collection.MutateIn(docKey, ops, &gocb.MutateInOptions{
 		Context: ctx,
 	})
-	
+
 	return err
 }
 
@@ -119,7 +119,7 @@ func (r *CouchbaseRepository) GetUnreadCount(ctx context.Context, userID string)
 	var result struct {
 		Count int `json:"count"`
 	}
-	
+
 	if rows.Next() {
 		rows.Row(&result)
 	}

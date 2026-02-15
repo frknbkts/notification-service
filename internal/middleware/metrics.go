@@ -13,16 +13,16 @@ var (
 	opsProcessed = promauto.NewCounterVec(prometheus.CounterOpts{
 		Name: "notification_service_requests_total",
 		Help: "The total number of processed requests",
-	}, []string{"method"}) 
+	}, []string{"method"})
 )
 
 func MetricsInterceptor(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (interface{}, error) {
 	start := time.Now()
-	
+
 	resp, err := handler(ctx, req)
 
 	opsProcessed.WithLabelValues(info.FullMethod).Inc()
-	
-	_ = start 
+
+	_ = start
 	return resp, err
 }

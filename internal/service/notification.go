@@ -14,15 +14,15 @@ import (
 )
 
 type NotificationService struct {
-	pb.UnimplementedNotificationServiceServer 
-	repo                                      ports.NotificationRepository
+	pb.UnimplementedNotificationServiceServer
+	repo        ports.NotificationRepository
 	subscribers map[string]chan *pb.Notification
 	mu          sync.RWMutex
 }
 
 func NewNotificationService(repo ports.NotificationRepository) *NotificationService {
 	return &NotificationService{
-		repo: repo,
+		repo:        repo,
 		subscribers: make(map[string]chan *pb.Notification),
 	}
 }
@@ -33,7 +33,7 @@ func (s *NotificationService) SendNotification(ctx context.Context, req *pb.Send
 	}
 
 	notification := ProtoToDomain(req)
-	
+
 	notification.ID = uuid.New().String()
 	notification.CreatedAt = time.Now().Unix()
 
@@ -61,9 +61,9 @@ func (s *NotificationService) SendNotification(ctx context.Context, req *pb.Send
 
 func (s *NotificationService) GetNotifications(ctx context.Context, req *pb.GetNotificationsRequest) (*pb.GetNotificationsResponse, error) {
 	if req.Limit == 0 {
-		req.Limit = 10 
+		req.Limit = 10
 	}
-	
+
 	offset := (req.Page - 1) * req.Limit
 	if offset < 0 {
 		offset = 0

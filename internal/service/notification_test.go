@@ -83,41 +83,33 @@ func TestGetNotifications_Success(t *testing.T) {
 	mockRepo.AssertExpectations(t)
 }
 func TestMarkAsRead_Success(t *testing.T) {
-	// Arrange
 	mockRepo := new(MockRepository)
 	service := NewNotificationService(mockRepo)
 	ctx := context.Background()
 	notifID := "bildirim_123"
 	userID := "user_123"
 
-	// Mock: MarkAsRead çağrıldığında nil (hata yok) dön
 	mockRepo.On("MarkAsRead", ctx, notifID, userID).Return(nil)
 
-	// Act
 	req := &pb.MarkAsReadRequest{NotificationId: notifID, UserId: userID}
 	resp, err := service.MarkAsRead(ctx, req)
 
-	// Assert
 	assert.NoError(t, err)
 	assert.True(t, resp.Success)
 	mockRepo.AssertExpectations(t)
 }
 
 func TestGetUnreadCount_Success(t *testing.T) {
-	// Arrange
 	mockRepo := new(MockRepository)
 	service := NewNotificationService(mockRepo)
 	ctx := context.Background()
 	userID := "user_123"
 
-	// Mock: GetUnreadCount çağrıldığında 5 dön
 	mockRepo.On("GetUnreadCount", ctx, userID).Return(5, nil)
 
-	// Act
 	req := &pb.GetUnreadCountRequest{UserId: userID}
 	resp, err := service.GetUnreadCount(ctx, req)
 
-	// Assert
 	assert.NoError(t, err)
 	assert.Equal(t, int32(5), resp.Count)
 	mockRepo.AssertExpectations(t)
