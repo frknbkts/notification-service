@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"sync"
 	"time"
 
 	"github.com/google/uuid"
@@ -15,11 +16,14 @@ import (
 type NotificationService struct {
 	pb.UnimplementedNotificationServiceServer 
 	repo                                      ports.NotificationRepository
+	subscribers map[string]chan *pb.Notification
+	mu          sync.RWMutex
 }
 
 func NewNotificationService(repo ports.NotificationRepository) *NotificationService {
 	return &NotificationService{
 		repo: repo,
+		subscribers: make(map[string]chan *pb.Notification),
 	}
 }
 
@@ -37,6 +41,17 @@ func (s *NotificationService) SendNotification(ctx context.Context, req *pb.Send
 	if err != nil {
 		return &pb.SendNotificationResponse{Success: false}, status.Errorf(codes.Internal, "kayit hatasi: %v", err)
 	}
+
+	go func() {
+		s.mu.RLock()
+		if ch, ok := s.subscribers[req.UserId]; ok {
+			select {
+			case ch <- DomainToProto(notification):
+			default:
+			}
+		}
+		s.mu.RUnlock()
+	}()
 
 	return &pb.SendNotificationResponse{
 		Id:      notification.ID,
@@ -85,4 +100,31 @@ func (s *NotificationService) GetUnreadCount(ctx context.Context, req *pb.GetUnr
 		return nil, status.Errorf(codes.Internal, "sayim hatasi: %v", err)
 	}
 	return &pb.GetUnreadCountResponse{Count: int32(count)}, nil
+}
+
+func (s *NotificationService) StreamNotifications(req *pb.StreamNotificationsRequest, stream pb.NotificationService_StreamNotificationsServer) error {
+
+	notificationChan := make(chan *pb.Notification, 100)
+
+	s.mu.Lock()
+	s.subscribers[req.UserId] = notificationChan
+	s.mu.Unlock()
+
+	defer func() {
+		s.mu.Lock()
+		delete(s.subscribers, req.UserId)
+		close(notificationChan)
+		s.mu.Unlock()
+	}()
+
+	for {
+		select {
+		case note := <-notificationChan:
+			if err := stream.Send(note); err != nil {
+				return err
+			}
+		case <-stream.Context().Done():
+			return nil
+		}
+	}
 }

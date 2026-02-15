@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"io"
 	"log"
 	"time"
 
@@ -20,11 +21,36 @@ func main() {
 	defer conn.Close()
 
 	client := pb.NewNotificationServiceClient(conn)
+	
+	streamCtx := context.Background()
+
+	go func() {
+		fmt.Println("📡 Canlı Akışa Bağlanılıyor (StreamNotifications)...")
+		stream, err := client.StreamNotifications(streamCtx, &pb.StreamNotificationsRequest{UserId: "user_123"})
+		if err != nil {
+			log.Printf("Stream baslatma hatasi: %v", err)
+			return
+		}
+
+		for {
+			notification, err := stream.Recv()
+			if err == io.EOF {
+				break
+			}
+			if err != nil {
+				log.Printf("Stream okuma hatasi: %v", err)
+				return
+			}
+			fmt.Printf("\n🔔 [CANLI BİLDİRİM GELDİ!] %s: %s\n", notification.Title, notification.Body)
+		}
+	}()
+
+	time.Sleep(1 * time.Second)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	fmt.Println("--- Bildirim Gonderiliyor ---")
+	fmt.Println("\n--- Bildirim Gonderiliyor ---")
 	sendRes, err := client.SendNotification(ctx, &pb.SendNotificationRequest{
 		UserId:   "user_123",
 		SenderId: "user_999",
@@ -51,4 +77,7 @@ func main() {
 	for _, n := range listRes.Notifications {
 		fmt.Printf("- [%s] %s: %s (Okundu: %v)\n", n.Id, n.Title, n.Body, n.IsRead)
 	}
+
+	fmt.Println("\n(Canlı bildirimin ekrana düşmesi bekleniyor...)")
+	time.Sleep(2 * time.Second)
 }
